@@ -7,17 +7,15 @@ var tally is an object whose properties are named for the destinations and the v
 var answers is an array of strings whose members are the raw selected values from the form: example ["i", "p"]
 */
     var tally = {
-      "a":0,"b":0
+      "a":0,"b":0, "c":0
     };
-    var answers = [
-      $("#eat").find(":selected").val(),
-      $("#vaca").find(":selected").val(),
-      $("#weekend").find(":selected").val(),
-      $("#wear").find(":selected").val(),
-      $("#dinner").find(":selected").val()
+    var questions = [
+      $("#movie").find(":selected").val(),
+      $("#ticket").find(":selected").val(),
+      $("#time").find(":selected").val(),
     ];
 
-    for (i in answers) {
+    for (i in questions) {
       var currentAnswer = answers[i];
       console.log(currentAnswer);
       tally[currentAnswer]++;
